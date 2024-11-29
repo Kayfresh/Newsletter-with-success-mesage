@@ -17,7 +17,6 @@ function errorMessages() {
 const subscribe = () => {
   const emailInp = email.value;
 
-  myemail.textContent = "";
   error.textContent = "";
   error.style.color = "";
   email.style.color = "#36384d";
@@ -27,7 +26,7 @@ const subscribe = () => {
     errorMessages();
   } else if (emailRegex.test(emailInp)) {
     // window.open("success.html", "_blank");
-    window.location.href = "success.html";
+    window.location.href = "/success/success.html";
     localStorage.setItem("email", emailInp);
   } else {
     errorMessages();
